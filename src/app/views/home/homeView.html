@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <h1 class="home__h1">Hello, {{home.name}}</h1>
+  <a href="#" ng-click="showParking = !showParking" class="btn btn-primary btn-lg">
+    {{showParking ? 'Hide' : 'Show'}}
+  </a>
+</div>
+
+<div class="jumbotron" ng-show="!showParking">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit esse sint omnis, repellat libero recusandae necessitatibus reiciendis quaerat in, iusto aliquid officia cum at adipisci veritatis non eos, nihil illo. Fuga nam libero magni nesciunt odio officiis numquam repudiandae, molestiae.
+</div>
+
+<div class="jumbotron" ng-show="showParking">
+  <img ng-src="{{home.map}}" class="img-responsive img-thumbnail">
+</div>
