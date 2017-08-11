@@ -119,16 +119,7 @@ module.exports = function makeWebpackConfig () {
       loader: 'raw'
     }, {
       test: /\.scss$/,
-      include: [
-        path.resolve(__dirname, 'src', 'app'),
-        path.resolve(__dirname, 'src', 'style')
-      ],
-      loaders: [
-        'style',
-        'css?importLoaders=1&modules&localIdentName=[local]---[hash:base64:5]',
-        'postcss',
-        'sass'
-      ]
+      loader: 'style!css!sass'
     }]
   };
 
