@@ -1,13 +1,15 @@
 <!doctype html>
 <html ng-app="app" lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Parking App</title>
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-
-  <base href="/">
-</head>
-<body>
-  <app></app>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Parking App</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <base href="/">
+  </head>
+  <body>
+    <div ui-view="header"></div>
+    <div ui-view="content"></div>
+    <div ui-view="footer"></div>
+  </body>
 </html>

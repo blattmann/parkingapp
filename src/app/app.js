@@ -1,25 +1,34 @@
+// Import Angular stuff.
 import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 
-import '../style/app.css';
+// Import Twitter Bootstrap.
+import 'bootstrap/dist/css/bootstrap.css';
 
-let app = () => {
-  return {
-    template: require('./app.html'),
-    controller: 'AppCtrl',
-    controllerAs: 'app'
-  }
-};
+// Import global styles
+import style from '../style/main.scss';
 
-class AppCtrl {
-  constructor() {
-    this.url = 'https://github.com/preboot/angular-webpack';
-  }
-}
+// Import the global routing.
+import routing from './routes';
 
+// Import views.
+import home from './views/home';
+import footer from './views/footer';
+
+// Define the module name.
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [])
-  .directive('app', app)
-  .controller('AppCtrl', AppCtrl);
+// Init the app.
+angular
+  .module(MODULE_NAME, [
+    uiRouter,
+    home,
+    footer
+  ])
+  .config(routing)
+  .constant('CONFIG', {
+    // API URL
+    dataUrl: 'http://localhost:3000/db'
+  })
 
 export default MODULE_NAME;
