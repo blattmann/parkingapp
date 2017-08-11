@@ -1,2 +1,28 @@
-.sass-cache/
-*.css.map
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+.DS_Store
+npm-debug.log
+yarn-error.log
+
+_designs
+_examples
+_old
+_tools
+_work
+
+beacons
+copy
+coverage
+dev/www/css
+dev/www/sync
+dist
+ionFullApp
+ionic
+node_modules
+offline-sync
+push
+rcstest
+testapps
+upload
+webSqlApp
