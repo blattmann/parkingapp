@@ -33,6 +33,31 @@ $ npm install
 $ npm start
 ```
 
+> JSON server
+
+```bash
+# install JSON server to provide fake json data for testing
+$ npm install -g json-server
+
+# open (new) shell window and cd to the data folder
+$ cd parkingapp/src/data/
+
+# run the server with your desired json file, e.g. "test.json"
+$ json-server --watch parking.json
+
+# hint for me:
+# remember to run the fake server with this command:
+$ json-server --watch /Library/WebServer/Documents/parkingapp/src/data/parking.json
+
+# Resources
+  http://localhost:3000/vendor
+  http://localhost:3000/parkings
+  http://localhost:3000/dictionary
+
+# Home
+  http://localhost:3000
+```
+
 go to <http://localhost:8080> in your browser.
 
 # Table of Contents
