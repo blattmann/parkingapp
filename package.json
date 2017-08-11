@@ -1,7 +1,7 @@
 {
   "name": "angular-webpack-workflow",
   "version": "1.0.0",
-  "description": "A workflow for Angular made with Webpack",
+  "description": "Parking App made with Angular 1.5.0 and Webpack",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
@@ -13,14 +13,17 @@
     "type": "git",
     "url": "https://github.com/Foxandxss/angular-webpack-workflow.git"
   },
-  "author": "Jesus Rodriguez",
+  "author": "Stefan Blattmann",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Foxandxss/angular-webpack-workflow/issues"
   },
   "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
   "dependencies": {
-    "angular": "^1.5.0"
+    "angular": "^1.5.0",
+    "angular-sanitize": "^1.5.0",
+    "angular-touch": "^1.5.0",
+    "angular-ui-router": "^1.0.3"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
@@ -43,13 +46,15 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "node-libs-browser": "^1.0.0",
+    "node-sass": "^4.5.3",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.4",
     "postcss-loader": "^0.8.0",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.13",
+    "webpack": "^1.15.0",
     "webpack-dev-server": "^1.14.1"
   }
 }
