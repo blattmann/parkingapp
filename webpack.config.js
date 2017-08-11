@@ -1,6 +1,7 @@
 'use strict';
 
 // Modules
+var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -116,6 +117,18 @@ module.exports = function makeWebpackConfig () {
       // Allow loading html through js
       test: /\.html$/,
       loader: 'raw'
+    }, {
+      test: /\.scss$/,
+      include: [
+        path.resolve(__dirname, 'src', 'app'),
+        path.resolve(__dirname, 'src', 'style')
+      ],
+      loaders: [
+        'style',
+        'css?importLoaders=1&modules&localIdentName=[local]---[hash:base64:5]',
+        'postcss',
+        'sass'
+      ]
     }]
   };
 
