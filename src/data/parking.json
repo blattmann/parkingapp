@@ -2,7 +2,7 @@
   "vendor": {
     "name": "ParkinGo",
     "departureAirport": "Bergamo Orio al Serio",
-    "map": "http://lorempixel.com/370/390",
+    "map": "http://www.viamilanoparking.eu/res_ext/img_map_malpensa_mobile.jpg",
     "features": [
       "ParkinGo of selected tipology",
       "Bus from/per airport 24h",
