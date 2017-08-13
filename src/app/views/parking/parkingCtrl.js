@@ -5,6 +5,7 @@ export default function parking($scope, $http, $timeout, CONFIG) {
   // Declare some vars.
   let self = this;
   let source = CONFIG.dataUrl;
+  let counter = -1;
 
   // Apply custom view styles.
   $scope.style = style;
@@ -12,11 +13,26 @@ export default function parking($scope, $http, $timeout, CONFIG) {
   // Hide alert on init.
   $scope.toggleAlert = false;
 
+  $scope.noitems = '';
+
   // Show alert on click.
   $scope.showAlert = function(id) {
     console.log('id: ', id);
     $scope.id = id;
     $scope.toggleAlert = true;
+
+    // Remove selected element from DOM.
+    document.getElementById(id).remove();
+
+    // Decrease the counter.
+    if(counter === -1) {
+      counter = $scope.home.parkings.length;
+    }
+    counter = counter - 1;
+
+    if(counter === 0) {
+      $scope.noitems = 'No more parking slots available!';
+    }
 
     // Hide alert after 2 seconds
     $timeout(function() {
@@ -44,4 +60,6 @@ export default function parking($scope, $http, $timeout, CONFIG) {
   self.alertCongrats = 'Congrats!';
   self.alertSentence1 = 'Parking slot';
   self.alertSentence2 = 'was added to your cart.';
+
+
 }
