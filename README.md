@@ -9,8 +9,6 @@ Features:
 - Source maps included in all builds.
 - Development server with live reload.
 - Production builds with cache busting.
-- Testing environment using karma to run tests and jasmine as the framework.
-- Code coverage when tests are run.
 - No gulp and no grunt, just npm scripts.
 
 > Warning: Make sure you're using the latest version of Node.js and NPM
@@ -20,7 +18,7 @@ Features:
 > Clone/Download the repo then edit `app.js` inside [`/src/app/app.js`](/src/app/app.js)
 
 ```bash
-# clone our repo
+# clone the repo
 $ git clone https://github.com/blattmann/parkingapp parkingapp
 
 # change directory to your app
@@ -50,15 +48,13 @@ $ json-server --watch parking.json
 $ json-server --watch /Library/WebServer/Documents/parkingapp/src/data/parking.json
 
 # Resources
+  http://localhost:3000/db
   http://localhost:3000/vendor
   http://localhost:3000/parkings
   http://localhost:3000/dictionary
-
-# Home
-  http://localhost:3000
 ```
 
-go to <http://localhost:8080> in your browser.
+Go to <http://localhost:8080> in your browser to view the app.
 
 # Table of Contents
 
@@ -83,9 +79,8 @@ What you need to run this app:
 
 ## Installing
 
-- `fork` this repo if you want to make your own changes
-- `clone` your fork
-- `npm install` to install all dependencies
+- `clone` or `download` this repo
+- `npm i` to install all dependencies
 
 ## Running the app
 
@@ -96,20 +91,6 @@ npm start
 ```
 
 It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
-
-## Developing
-
-### Build files
-
-- single run: `npm run build`
-- build files and watch: `npm run watch`
-
-## Testing
-
-### 1\. Unit Tests
-
-- single run: `npm test`
-- live mode (TDD style): `npm run test-watch`
 
 # License
 
