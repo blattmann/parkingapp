@@ -1,0 +1,6 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="sidenav__closebtn" ng-click="closeNav($event)">&times;</a>
+  <a href="/home" ng-class="getClass('/home')">{{home.link1}}</a>
+  <a href="/parking" ng-class="getClass('/parking')">{{home.link2}}</a>
+</div>
+<span class="sidenav__burger" ng-click="openNav($event)">&#9776; {{home.menu}}</span>
