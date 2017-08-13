@@ -14,6 +14,10 @@ Features:
 
 > Info: The "shopping cart" is only active at the "parking" view. The items are not stored! The cart will be cleared after each page reload / view change!
 
+## Preview
+
+[![Watch a preview on Youtube.](https://img.youtube.com/vi/BcLXR7qW9bk/0.jpg)](https://www.youtube.com/watch?v=BcLXR7qW9bk)
+
 ## Quick start
 
 > Clone/Download the repo then install the dependencies and run it
