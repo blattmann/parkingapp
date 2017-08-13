@@ -3,7 +3,25 @@
     <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="hideAlert()">
       <span aria-hidden="true">&times;</span>
     </button>
-    <strong>{{home.alertCongrats}}</strong> {{home.alertSentence1}} <strong>{{id}}</strong> {{home.alertSentence2}}
+    <strong>{{alertCongrats}}</strong> {{alertSentence1}} <strong>{{id}}</strong> {{alertSentence2}}
+  </div>
+</div>
+
+<div class="row cart__wrapper" ng-if="cart.length > 0">
+  <div class="col-xs-12 cart__container">
+    <strong>{{cart.length}}</strong> {{itemsInCart}} |
+    <a href="#" ng-click="showCart = !showCart;showCartContent()" class="cart__link">
+      {{showCart ? hideMyCart : showMyCart}}
+    </a>
+  </div>
+
+  <div class="col-xs-6 col-md-2 pull-right cart__content" ng-show="showCart">
+    <ul class="cart__ul">
+      <li class="cart__li" ng-repeat="item in cart">
+        {{parkingSlot}}: {{item.id}}<br />
+        {{price}}: {{item.price}}
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -13,16 +31,16 @@
 
     <div ng-if="home.parkings.length > 0" id={{item.id}} class="col-xs-12 col-md-6 parking__item" ng-repeat="item in home.parkings" ng-click="showAlert(item.id, item.price)">
       <div ng-if="item.indoor">
-        <i class="fa fa-car" aria-hidden="true"></i> {{home.indoorparking}}
+        <i class="fa fa-car" aria-hidden="true"></i> {{indoorparking}}
       </div>
       <div ng-if="!item.indoor">
-        <i class="fa fa-car notavaiable" aria-hidden="true"></i><i class="linethrough linethrough--car"></i> {{home.noindoorparking}}
+        <i class="fa fa-car notavaiable" aria-hidden="true"></i><i class="linethrough linethrough--car"></i> {{noindoorparking}}
       </div>
       <div ng-if="item.insurance">
-        <i class="fa fa-list-alt" aria-hidden="true"></i> {{home.insurance}}
+        <i class="fa fa-list-alt" aria-hidden="true"></i> {{insurance}}
       </div>
       <div ng-if="!item.insurance">
-        <i class="fa fa-list-alt notavaiable" aria-hidden="true"></i><i class="linethrough linethrough--insurance"></i> {{home.noinsurance}}
+        <i class="fa fa-list-alt notavaiable" aria-hidden="true"></i><i class="linethrough linethrough--insurance"></i> {{noinsurance}}
       </div>
       <div>
         <i class="fa fa-eur" aria-hidden="true"></i> {{item.price}}

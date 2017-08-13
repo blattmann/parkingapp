@@ -57,6 +57,9 @@ export default function parking($scope, $http, $timeout, CONFIG) {
     $scope.toggleAlert = false;
   }
 
+  // Hide cart details on init.
+  $scope.showCart = false;
+
   // Get the data from the API.
   $http.get(source)
     .then(function(res) {
@@ -65,11 +68,16 @@ export default function parking($scope, $http, $timeout, CONFIG) {
     })
 
   // Content
-  self.indoorparking = 'Indoor parking available.';
-  self.noindoorparking = 'No indoor parking available.';
-  self.insurance = 'Insurance available.';
-  self.noinsurance = 'No insurance available.';
-  self.alertCongrats = 'Congrats!';
-  self.alertSentence1 = 'Parking slot';
-  self.alertSentence2 = 'was added to your cart.';
+  $scope.indoorparking = 'Indoor parking available.';
+  $scope.noindoorparking = 'No indoor parking available.';
+  $scope.insurance = 'Insurance available.';
+  $scope.noinsurance = 'No insurance available.';
+  $scope.alertCongrats = 'Congrats!';
+  $scope.alertSentence1 = 'Parking slot';
+  $scope.alertSentence2 = 'was added to your cart.';
+  $scope.itemsInCart = 'item(s) in your cart.';
+  $scope.showMyCart = 'Show cart';
+  $scope.hideMyCart = 'Hide cart';
+  $scope.parkingSlot = 'Parking-Slot';
+  $scope.price = 'Price';
 }

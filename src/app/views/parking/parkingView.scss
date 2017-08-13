@@ -38,3 +38,52 @@
     }
   }
 }
+
+.cart {
+
+  &__container {
+    text-align: right;
+    margin-top: -10px;
+    padding-right: 0;
+
+    @include vp-l {
+      margin-top: -20px;
+    }
+  }
+
+  &__content {
+    text-align: right;
+    padding: 10px 20px;
+    width: 200px;
+    border: 1px solid $color-white-paper-white;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding-bottom: 0;
+  }
+
+  &__ul {
+    list-style-type: none;
+  }
+
+  &__li {
+    border-bottom: 1px dashed $color-white-paper-white;
+    padding: 5px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__link {
+    color: $color-white-paper-white;
+    text-decoration: none;
+
+    &:link,
+    &:hover,
+    &:active,
+    &:visited {
+      color: $color-white-paper-white;
+      text-decoration: none;
+    }
+  }
+}

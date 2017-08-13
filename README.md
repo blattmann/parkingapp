@@ -12,7 +12,7 @@ Features:
 
 > Warning: Make sure you're using the latest version of Node.js and NPM
 
-> Info: You need to have the JavaScript console running to see the "shopping cart" in action as the items will only be displayed via console.log
+> Info: The "shopping cart" is only active at the "parking" view. The items are not stored! The cart will be cleared after each page reload / view change!
 
 ## Quick start
 
