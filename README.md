@@ -15,7 +15,7 @@ Features:
 
 ## Quick start
 
-> Clone/Download the repo then edit `app.js` inside [`/src/app/app.js`](/src/app/app.js)
+> Clone/Download the repo then install the dependencies and run it
 
 ```bash
 # clone the repo
@@ -25,7 +25,7 @@ $ git clone https://github.com/blattmann/parkingapp parkingapp
 $ cd parkingapp
 
 # install the dependencies with npm
-$ npm install
+$ npm i
 
 # start the server
 $ npm start
@@ -35,7 +35,7 @@ $ npm start
 
 ```bash
 # install JSON server to provide fake json data for testing
-$ npm install -g json-server
+$ npm i -g json-server
 
 # open (new) shell window and cd to the data folder
 $ cd parkingapp/src/data/
