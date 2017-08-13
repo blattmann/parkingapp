@@ -1,8 +1,14 @@
 import style from './footerView.scss';
 
 export default function ($scope) {
-  console.log('footerCtrl.js');
+  // Declare some vars.
+  let self = this;
+
+  // Apply custom view styles.
   $scope.style = style;
-  this.url = 'https://github.com/blattmann/parkingapp';
-  this.author = 'Stefan Blattmann';
+
+  // Content
+  self.url = 'https://github.com/blattmann/parkingapp';
+  self.created = 'Created by ';
+  self.author = 'Stefan Blattmann';
 }

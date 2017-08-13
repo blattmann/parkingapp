@@ -1,17 +1,24 @@
-/* src/app/views/app/homeView.scss */
+/* src/app/views/footer/footerView.scss */
+@import '../../../style/main';
 
-body {
-  background: #0147A7;
-  color: #fff;
-}
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: $color-gray-moon;
+  color: $color-black-solid;
 
-a {
-  color: #03A9F4;
-}
+  @include vp-xs {
+    text-align: center;
+  }
 
-.jumbotron {
-  .home__h1 {
-    color: #000;
-    font-size: 3.5rem;
+  &__link {
+    color: $color-black-solid;
+
+    &:hover {
+      color: $color-black-solid;
+    }
   }
 }
