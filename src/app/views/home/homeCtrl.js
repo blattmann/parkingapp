@@ -1,6 +1,7 @@
 import style from './homeView.scss';
 
-export default function ($scope, $http, CONFIG) {
+home.$inject = ['$scope', '$http', 'CONFIG'];
+export default function home($scope, $http, CONFIG) {
   // Declare some vars.
   let self = this;
   let source = CONFIG.dataUrl;

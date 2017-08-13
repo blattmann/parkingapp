@@ -1,6 +1,7 @@
 import style from './headerView.scss';
 
-export default function ($scope) {
+header.$inject = ['$scope'];
+export default function header($scope) {
   // Apply custom view styles.
   $scope.style = style;
 

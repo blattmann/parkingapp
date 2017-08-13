@@ -1,6 +1,10 @@
 import style from './navigationView.scss';
 
-export default function ($scope, $location) {
+navi.$inject = ['$scope', '$location'];
+
+export default function navi($scope, $location) {
+// export default function ($scope, $location) {
+
   // Declare some vars.
   let self = this;
 

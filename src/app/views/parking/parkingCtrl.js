@@ -1,6 +1,7 @@
 import style from './parkingView.scss';
 
-export default function ($scope, $http, $timeout, CONFIG) {
+parking.$inject = ['$scope', '$http', '$timeout', 'CONFIG'];
+export default function parking($scope, $http, $timeout, CONFIG) {
   // Declare some vars.
   let self = this;
   let source = CONFIG.dataUrl;

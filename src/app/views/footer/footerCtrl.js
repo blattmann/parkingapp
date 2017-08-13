@@ -1,6 +1,7 @@
 import style from './footerView.scss';
 
-export default function ($scope) {
+footer.$inject = ['$scope'];
+export default function footer($scope) {
   // Declare some vars.
   let self = this;
 
