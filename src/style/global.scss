@@ -1,0 +1,88 @@
+/* styles in src/style directory are applied to the whole page */
+
+// base font size
+html {
+  font-size: 16px;
+}
+
+body {
+  background: $color-cobalt;
+  color: $color-white-paper-white;
+  position: relative;
+}
+
+nav {
+  margin-left: -15px;
+
+  @include vp-xs {
+    margin: 0 auto;
+  }
+
+  @include vp-s {
+    margin: 0 auto;
+  }
+}
+
+header,
+main {
+  position: relative;
+  top: 4rem;
+}
+
+// Remove outline on focus.
+*:focus {
+  outline: 0 !important;
+}
+
+.linethrough {
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    background: $color-white-paper-white;
+    width: 15px;
+    height: 3px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: 10px;
+  }
+
+  &:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &--car {
+    &:before,
+    &:after {
+      top: 19px;
+    }
+  }
+
+  &--insurance {
+    &:before,
+    &:after {
+      top: 38px;
+    }
+  }
+}
+
+.notavaiable {
+  color: $color-monza;
+}
+
+.fa {
+  width: 20px;
+}
+
+.row {
+
+  @include vp-xs {
+    margin: 0 auto;
+  }
+
+  @include vp-s {
+    margin: 0 auto;
+  }
+}

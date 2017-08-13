@@ -1,0 +1,51 @@
+// Media Queries
+@mixin vp-xs { // mobile
+  @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin vp-s {
+  @media screen and (min-width: #{$mobile-width + 1}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin vp-m { // tablet
+  @media screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin vp-ml {
+  @media screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin vp-l { // desktop
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin vp-xl { // largescreen
+  @media screen and (min-width: #{$largescreen-width}) {
+    @content;
+  }
+}
+
+// example usage:
+/*
+p {
+  font-size: 16px;
+
+  @include vp-m {
+    font-size: 18px;
+  }
+
+  @include vp-l {
+    font-size: 20px;
+  }
+}
+*/

@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Parking App</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <script src="https://use.fontawesome.com/22327c7833.js"></script>
     <base href="/">
   </head>
   <body>
-    <div ui-view="header"></div>
-    <div ui-view="content"></div>
-    <div ui-view="footer"></div>
+    <div class="container">
+      <nav ui-view="navigation"></nav>
+      <header ui-view="header"></header>
+      <main ui-view="content"></main>
+      <footer ui-view="footer"></footer>
+    </div>
   </body>
 </html>

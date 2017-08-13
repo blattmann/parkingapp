@@ -1,20 +1,4 @@
-/* styles in src/style directory are applied to the whole page */
-body {
-  background: #0147A7;
-  color: #fff;
-}
-
-a {
-  color: #03A9F4;
-}
-
-.jumbotron {
-  .home__h1 {
-    font-size: 2.5rem;
-  }
-}
-
-footer {
-  text-align: center;
-  font-size: 0.8rem;
-}
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+@import 'global';
