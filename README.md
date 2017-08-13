@@ -92,6 +92,20 @@ npm start
 
 It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
 
+## Developing
+
+### Build files
+
+> Before you can make a build you will need to edit [`webpack.config.js`](webpack.config.js) at line 50:
+
+```bash
+# The default public path should be '/'. Please adjust it to your needs!
+publicPath: isProd ? 'http://localhost/parkingapp/dist/' : 'http://localhost:8080/',
+```
+
+- single run: `npm run build`
+- build files and watch: `npm run watch`
+
 # License
 
 [MIT](/LICENSE)
