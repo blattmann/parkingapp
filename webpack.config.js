@@ -157,7 +157,13 @@ module.exports = function makeWebpackConfig () {
    * Reference: http://webpack.github.io/docs/configuration.html#plugins
    * List: http://webpack.github.io/docs/list-of-plugins.html
    */
-  config.plugins = [];
+  config.plugins = [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false // false: surprsses uglify.js warnings; to enable set to 'true'
+      }
+    })
+  ];
 
   // Skip rendering index.html in test mode
   if (!isTest) {
