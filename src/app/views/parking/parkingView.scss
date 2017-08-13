@@ -1,0 +1,40 @@
+/* src/app/views/parking/parkingView.scss */
+@import '../../../style/main';
+
+.parking {
+  min-height: 100px;
+  border: 1px solid $color-cerulean;
+  border-radius: 5px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  background-color: $color-cerulean;
+  margin-bottom: 5rem !important;
+
+  @include vp-m {
+    margin-bottom: 0 !important;
+  }
+
+  &__item {
+    padding: 10px;
+    border: 1px solid $color-black-solid;
+    margin: 5px;
+    margin-left: 0;
+    cursor: pointer;
+
+    @include vp-l {
+      width: 48%;
+    }
+
+    &:nth-child(even) {
+      background-color: $color-relax;
+    }
+
+    &:nth-child(odd) {
+      background-color: $color-family;
+
+      @include vp-l {
+        margin-left: 1.5%;
+      }
+    }
+  }
+}
