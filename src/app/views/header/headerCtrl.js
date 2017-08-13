@@ -10,5 +10,5 @@ export default function header($scope) {
   $scope.style = style;
 
   // Content
-  this.headline = 'My Parking App';
+  $scope.headline = 'My Parking App';
 }

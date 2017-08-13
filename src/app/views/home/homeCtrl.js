@@ -34,7 +34,7 @@ export default function home($scope, $http, CONFIG) {
     })
 
   // Content
-  self.show = 'Show details';
-  self.hide = 'Hide details';
-  self.logo = 'Logo';
+  $scope.show = 'Show details';
+  $scope.hide = 'Hide details';
+  $scope.logo = 'Logo';
 }

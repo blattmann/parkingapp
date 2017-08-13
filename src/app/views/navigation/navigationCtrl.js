@@ -3,23 +3,22 @@ import style from './navigationView.scss';
 navi.$inject = ['$scope', '$location'];
 
 export default function navi($scope, $location) {
-// export default function ($scope, $location) {
 
   // Declare some vars.
-  let self = this;
+  let navId = '';
 
   // Apply custom view styles.
   $scope.style = style;
 
   // Open menu on click.
   $scope.openNav = function(event) {
-    let navId = 'mySidenav';
+    navId = 'mySidenav';
     document.getElementById(navId).style.width = '50%';
   }
 
   // Close menu on click.
   $scope.closeNav = function(event) {
-    let navId = event.path[1].id;
+    navId = event.path[1].id;
     document.getElementById(navId).style.width = '0';
   }
 
@@ -29,7 +28,7 @@ export default function navi($scope, $location) {
   }
 
   // Content
-  self.link1 = 'Home';
-  self.link2 = 'Parking';
-  self.menu = 'Menu';
+  $scope.link1 = 'Home';
+  $scope.link2 = 'Parking';
+  $scope.menu = 'Menu';
 }

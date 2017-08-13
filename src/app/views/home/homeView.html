@@ -7,7 +7,7 @@
       {{home.featuresTitle}}
     </div>
     <div class="col-xs-4 col-md-6">
-      <span class="home__logo pull-right">{{home.logo}}</span>
+      <span class="home__logo pull-right">{{logo}}</span>
     </div>
     <div class="col-xs-12 col-md-6">
       <img ng-src="{{home.map}}" class="img-responsive img-thumbnail">
@@ -20,7 +20,7 @@
   </div>
   <div class="col-xs-12">
     <a href="#" ng-click="showParking = !showParking; changeClass()" class="pull-right btn btn-info btn-xs home__button {{className}}">
-      {{showParking ? home.hide : home.show}}
+      {{showParking ? hide : show}}
     </a>
   </div>
 </div>
