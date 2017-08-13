@@ -1,7 +1,7 @@
 {
   "name": "angular-webpack-workflow",
   "version": "1.0.0",
-  "description": "Parking App made with Angular 1.5.0 and Webpack",
+  "description": "Parking App made with Angular 1.5.7 and Webpack",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
   "dependencies": {
-    "angular": "^1.5.0",
+    "angular": "^1.5.7",
     "angular-sanitize": "^1.5.0",
     "angular-touch": "^1.5.0",
     "angular-ui-router": "^1.0.3",
