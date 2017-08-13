@@ -12,6 +12,8 @@ Features:
 
 > Warning: Make sure you're using the latest version of Node.js and NPM
 
+> Info: You need to have the JavaScript console running to see the "shopping cart" in action as the items will only be displayed via console.log
+
 ## Quick start
 
 > Clone/Download the repo then install the dependencies and run it

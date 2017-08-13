@@ -13,18 +13,30 @@ export default function parking($scope, $http, $timeout, CONFIG) {
   // Hide alert on init.
   $scope.toggleAlert = false;
 
+  // Declare empty info
   $scope.noitems = '';
 
+  // Create shopping cart array.
+  $scope.cart = [];
+
   // Show alert on click.
-  $scope.showAlert = function(id) {
-    console.log('id: ', id);
+  $scope.showAlert = function(id, price) {
     $scope.id = id;
     $scope.toggleAlert = true;
+
+    // Add selected items to shopping cart.
+    $scope.cart.push({
+      id: id,
+      price: price
+    });
+
+    // Display shopping cart content.
+    console.log('My shopping cart: ', $scope.cart);
 
     // Remove selected element from DOM.
     document.getElementById(id).remove();
 
-    // Decrease the counter.
+    // Decrease the items counter.
     if(counter === -1) {
       counter = $scope.home.parkings.length;
     }
@@ -60,6 +72,4 @@ export default function parking($scope, $http, $timeout, CONFIG) {
   self.alertCongrats = 'Congrats!';
   self.alertSentence1 = 'Parking slot';
   self.alertSentence2 = 'was added to your cart.';
-
-
 }
