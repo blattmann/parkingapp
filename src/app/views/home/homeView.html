@@ -1,14 +1,26 @@
-<div class="jumbotron">
-  <h1 class="home__h1">Hello, {{home.name}}</h1>
-  <a href="#" ng-click="showParking = !showParking" class="btn btn-primary btn-lg">
-    {{showParking ? 'Hide' : 'Show'}}
-  </a>
-</div>
-
-<div class="jumbotron" ng-show="!showParking">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit esse sint omnis, repellat libero recusandae necessitatibus reiciendis quaerat in, iusto aliquid officia cum at adipisci veritatis non eos, nihil illo. Fuga nam libero magni nesciunt odio officiis numquam repudiandae, molestiae.
-</div>
-
-<div class="jumbotron" ng-show="showParking">
-  <img ng-src="{{home.map}}" class="img-responsive img-thumbnail">
+<div class="row home">
+  <div class="col-xs-12 home__headline">
+    {{home.bookYourParking}}
+  </div>
+  <div class="col-xs-12 home__image" ng-show="showParking">
+    <div class="col-xs-8 col-md-6">
+      {{home.featuresTitle}}
+    </div>
+    <div class="col-xs-4 col-md-6">
+      <span class="home__logo pull-right">{{home.logo}}</span>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <img ng-src="{{home.map}}" class="img-responsive img-thumbnail">
+    </div>
+    <div class="col-xs-12 col-md-6 home__listing">
+      <ul class="fa-ul">
+        <li ng-repeat="item in home.features"><i class="fa-li fa fa-check" aria-hidden="true"></i>{{item}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <a href="#" ng-click="showParking = !showParking; changeClass()" class="pull-right btn btn-info btn-xs home__button {{className}}">
+      {{showParking ? home.hide : home.show}}
+    </a>
+  </div>
 </div>
