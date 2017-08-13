@@ -8,6 +8,7 @@ Features:
 - Development server with live reload.
 - Production builds with source maps.
 - No gulp and no grunt, just npm scripts.
+- [BEM](http://getbem.com/) rules applied on own styles.
 
 > Warning: Make sure you're using the latest version of Node.js and NPM
 
