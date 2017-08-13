@@ -46,7 +46,8 @@ module.exports = function makeWebpackConfig () {
 
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/' : 'http://localhost:8080/',
+    // The default public path should be '/'. Please adjust it to your needs!
+    publicPath: isProd ? 'http://localhost/parkingapp/dist/' : 'http://localhost:8080/',
 
     // Filename for entry points
     // Only adds hash in build mode
