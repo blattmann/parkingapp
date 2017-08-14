@@ -5,9 +5,9 @@
     "map": "http://www.viamilanoparking.eu/res_ext/img_map_malpensa_mobile.jpg",
     "features": [
       "ParkinGo of selected tipology",
-      "Bus from/per airport 24h",
-      "Surveillance and supervision of car 24h",
-      "Free restore of battery low of your car"
+      "24 hour shuttle bus to/from all terminals",
+      "24 hour camera surveillance",
+      "Free electric vehicle charging stations"
     ]
   },
   "parkings": [{
@@ -32,11 +32,11 @@
     "price": "16.49 EUR"
   }],
   "dictionary": {
-    "bookYourParking": "Booking you parking",
-    "featuresTitle": "The following services are:",
-    "indoorSpace": "Covered car park",
-    "outdoorSpace": "Uncovered car park",
-    "insuranceIncluded": "Included issurance",
-    "insuranceExcluded": "Not included issurance"
+    "bookYourParking": "Booking your parking",
+    "featuresTitle": "The following services are offered:",
+    "indoorSpace": "Covered car parking",
+    "outdoorSpace": "Uncovered car parking",
+    "insuranceIncluded": "Insurance included",
+    "insuranceExcluded": "Insurance not included."
   }
 }
