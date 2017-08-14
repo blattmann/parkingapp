@@ -33,8 +33,8 @@ export default function parking($scope, $http, $timeout, CONFIG) {
     // Display shopping cart content.
     console.log('My shopping cart: ', $scope.cart);
 
-    // Remove selected element from DOM.
-    document.getElementById(id).remove();
+    // Hide selected element in DOM.
+    document.getElementById(id).style.display = 'none';
 
     // Decrease the items counter.
     if(counter === -1) {
@@ -60,18 +60,30 @@ export default function parking($scope, $http, $timeout, CONFIG) {
   // Hide cart details on init.
   $scope.showCart = false;
 
+  // Empty the cart
+  $scope.emptyCart = function() {
+    let listItem = document.getElementsByClassName('parking__item');
+    for(let i = 0; i < listItem.length; i++) {
+        listItem[i].style.display = 'initial';
+    }
+
+    $scope.cart = [];
+    $scope.noitems = '';
+    counter = -1;
+  }
+
   // Get the data from the API.
   $http.get(source)
     .then(function(res) {
       // Return the data.
       self.parkings = res.data.parkings;
+      self.indoorparking = res.data.dictionary.indoorSpace;
+      self.noindoorparking = res.data.dictionary.outdoorSpace;
+      self.insurance = res.data.dictionary.insuranceIncluded;
+      self.noinsurance = res.data.dictionary.insuranceExcluded;
     })
 
   // Content
-  $scope.indoorparking = 'Indoor parking available.';
-  $scope.noindoorparking = 'No indoor parking available.';
-  $scope.insurance = 'Insurance available.';
-  $scope.noinsurance = 'No insurance available.';
   $scope.alertCongrats = 'Congrats!';
   $scope.alertSentence1 = 'Parking slot';
   $scope.alertSentence2 = 'was added to your cart.';
@@ -80,4 +92,5 @@ export default function parking($scope, $http, $timeout, CONFIG) {
   $scope.hideMyCart = 'Hide cart';
   $scope.parkingSlot = 'Parking-Slot';
   $scope.price = 'Price';
+  $scope.emptyMyCart = 'Empty cart';
 }

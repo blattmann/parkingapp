@@ -12,6 +12,9 @@
     <strong>{{cart.length}}</strong> {{itemsInCart}} |
     <a href="#" ng-click="showCart = !showCart;showCartContent()" class="cart__link">
       {{showCart ? hideMyCart : showMyCart}}
+    </a> |
+    <a href="#" ng-click="emptyCart()" class="cart__link">
+      {{emptyMyCart}}
     </a>
   </div>
 
@@ -26,21 +29,21 @@
 </div>
 
 <div class="row parking">
-  <div class="parking__wrapper">
+  <div id="parkingSlots" class="parking__wrapper">
     {{noitems}}
 
     <div ng-if="home.parkings.length > 0" id={{item.id}} class="col-xs-12 col-md-6 parking__item" ng-repeat="item in home.parkings" ng-click="showAlert(item.id, item.price)">
       <div ng-if="item.indoor">
-        <i class="fa fa-car" aria-hidden="true"></i> {{indoorparking}}
+        <i class="fa fa-car" aria-hidden="true"></i> {{home.indoorparking}}
       </div>
       <div ng-if="!item.indoor">
-        <i class="fa fa-car notavaiable" aria-hidden="true"></i><i class="linethrough linethrough--car"></i> {{noindoorparking}}
+        <i class="fa fa-car notavaiable" aria-hidden="true"></i><i class="linethrough linethrough--car"></i> {{home.noindoorparking}}
       </div>
       <div ng-if="item.insurance">
-        <i class="fa fa-list-alt" aria-hidden="true"></i> {{insurance}}
+        <i class="fa fa-list-alt" aria-hidden="true"></i> {{home.insurance}}
       </div>
       <div ng-if="!item.insurance">
-        <i class="fa fa-list-alt notavaiable" aria-hidden="true"></i><i class="linethrough linethrough--insurance"></i> {{noinsurance}}
+        <i class="fa fa-list-alt notavaiable" aria-hidden="true"></i><i class="linethrough linethrough--insurance"></i> {{home.noinsurance}}
       </div>
       <div>
         <i class="fa fa-eur" aria-hidden="true"></i> {{item.price}}
