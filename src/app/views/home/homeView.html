@@ -1,6 +1,6 @@
 <div class="row home">
   <div class="col-xs-12 home__headline">
-    {{home.bookYourParking}}
+    {{home.bookYourParking}} {{home.departureAirport}}
   </div>
   <div class="col-xs-12 home__image" ng-show="showParking">
     <div class="col-xs-8 col-md-6">
@@ -16,6 +16,9 @@
       <ul class="fa-ul">
         <li ng-repeat="item in home.features"><i class="fa-li fa fa-check" aria-hidden="true"></i>{{item}}</li>
       </ul>
+      <a href="/parking" class="btn btn-warning btn-l home__button--booking ng-binding">
+        {{booknow}}
+      </a>
     </div>
   </div>
   <div class="col-xs-12">

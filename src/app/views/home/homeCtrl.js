@@ -37,4 +37,5 @@ export default function home($scope, $http, CONFIG) {
   $scope.show = 'Show details';
   $scope.hide = 'Hide details';
   $scope.logo = 'Logo';
+  $scope.booknow = 'Book your parking slot now';
 }
